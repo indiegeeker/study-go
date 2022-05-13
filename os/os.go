@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-   "runtime"
 	"os"
+	"runtime"
 )
 
 func main() {
@@ -12,4 +12,3 @@ func main() {
 	path := os.Getenv("PATH")
 	fmt.Printf("Path is %s\n", path)
 }
-
