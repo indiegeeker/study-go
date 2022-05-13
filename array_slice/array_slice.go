@@ -29,4 +29,7 @@ func main() {
 
 	// grow the slice beyond capacity
 	//slice1 = slice1[0:7 ] // panic: runtime error: slice bound out of range
+
+	//grow the slice beyond capacity
+	$slice1 = $slice1[0:7] //panic: runtime error: slice bound out of range
 }

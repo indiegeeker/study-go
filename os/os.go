@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-   "runtime"
 	"os"
+	"runtime"
 )
 
 func main() {
