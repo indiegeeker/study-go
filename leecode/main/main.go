@@ -54,11 +54,32 @@ func romanToInt(s string) int {
 	n := len(s)
 	res := 0
 	for index := range s {
-		reflect_value := reflectValues[s[index]]
-		if index < n-1 && reflect_value < reflectValues[s[index+1]] {
-			res -= reflect_value
+		reflectValue := reflectValues[s[index]]
+		if index < n-1 && reflectValue < reflectValues[s[index+1]] {
+			res -= reflectValue
 		} else {
-			res += reflect_value
+			res += reflectValue
+		}
+	}
+	return res
+}
+
+func finalValueAfterOperations(operations []string) int {
+	/**
+	存在一种仅支持 4 种操作和 1 个变量 X 的编程语言：
+
+	++X 和 X++ 使变量 X 的值 加 1
+	--X 和 X-- 使变量 X 的值 减 1
+	最初，X 的值是 0
+
+	给你一个字符串数组 operations ，这是由操作组成的一个列表，返回执行所有操作后， X 的 最终值 。
+	*/
+	res := 0
+	for index := range operations {
+		if operations[index] == "++X" || operations[index] == "X++" {
+			res += 1
+		} else {
+			res -= 1
 		}
 	}
 	return res
@@ -74,5 +95,6 @@ func main() {
 	min := minimumOperations(nums)
 	fmt.Println(min)
 
-	romanToInt("MCMXCIV")
+	res := romanToInt("MCMXCIV")
+	fmt.Println(res)
 }
