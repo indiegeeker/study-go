@@ -1,6 +1,8 @@
 package main
 
-import "golang.org/x/tour/pic"
+import (
+	"fmt"
+)
 
 func Pic(dx, dy int) [][]uint8 {
 	var pic [][]uint8
@@ -10,7 +12,7 @@ func Pic(dx, dy int) [][]uint8 {
 	for i := 0; i < dx; i++ {
 		pic[i] = make([]uint8, dy)
 		for j := 0; j < dy; j++ {
-			pic[i][j] = uint8((i + j) / 2) //每次改变这里
+			pic[i][j] = uint8((i + j) / 2)
 		}
 	}
 
@@ -18,6 +20,9 @@ func Pic(dx, dy int) [][]uint8 {
 }
 
 func main() {
-	pic.Show(Pic)
-
+	//pic.Show(Pic)
+	defer fmt.Println("1")
+	defer fmt.Println("2")
+	defer fmt.Println("3")
+	defer fmt.Println("4")
 }
