@@ -1,6 +1,8 @@
 package main
 
-import "golang.org/x/tour/pic"
+import (
+	"fmt"
+)
 
 func Pic(dx, dy int) [][]uint8 {
 	var pic [][]uint8
@@ -18,6 +20,9 @@ func Pic(dx, dy int) [][]uint8 {
 }
 
 func main() {
-	pic.Show(Pic)
-
+	//pic.Show(Pic)
+	defer fmt.Println("1")
+	defer fmt.Println("2")
+	defer fmt.Println("3")
+	defer fmt.Println("4")
 }
